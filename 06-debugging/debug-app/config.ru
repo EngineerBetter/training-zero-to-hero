@@ -51,9 +51,15 @@ class Web < Sinatra::Base
   end
 
   get "/fill-disk" do
-    File.open("infinite-file", "w") do |f|
-      (1..Float::INFINITY).each do
+    (1..256).each do |number|
+      # Write a 1MiB file
+      File.open("file-#{number}", "w") do |f|
         f.write(rand(65..91).chr * 1024 * 1024)
+      end
+
+      # Invoke garbage collection so we don't out-of-memory
+      if number % 16 == 0
+        GC.start
       end
     end
   end
