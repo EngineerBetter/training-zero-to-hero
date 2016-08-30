@@ -1,0 +1,5 @@
+applications:
+- name: worker-app
+  command: ruby periodic_logger.rb
+  no-route: true
+  health-check-type: none
