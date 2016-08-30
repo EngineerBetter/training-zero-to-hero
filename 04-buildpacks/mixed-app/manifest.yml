@@ -1,0 +1,4 @@
+---
+applications:
+- name: mixed-app
+  random-route: true

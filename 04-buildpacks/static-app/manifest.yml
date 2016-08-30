@@ -1,0 +1,4 @@
+---
+applications:
+- name: static-app
+  random-route: true
