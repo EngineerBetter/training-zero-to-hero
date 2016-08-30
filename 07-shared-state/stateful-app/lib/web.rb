@@ -64,13 +64,7 @@ class Web < Sinatra::Base
   get "/" do
     @total_instance_responses = REDIS.incr("total_instance_#{addr}_responses")
     @total_app_responses = REDIS.incr("total_app_responses")
-    @app_supporters = REDIS.zrevrange("app_supporters", 0, -1)
     erb :index
-  end
-
-  post "/app_supporters" do
-    REDIS.zadd("app_supporters", Time.now.utc.to_i, params[:name])
-    redirect to("/")
   end
 
   get "/env" do
