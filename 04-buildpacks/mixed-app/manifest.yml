@@ -2,3 +2,4 @@
 applications:
 - name: mixed-app
   random-route: true
+  memory: 64M

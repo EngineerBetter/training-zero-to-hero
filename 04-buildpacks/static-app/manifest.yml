@@ -2,3 +2,4 @@
 applications:
 - name: static-app
   random-route: true
+  memory: 64M

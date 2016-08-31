@@ -1,4 +1,4 @@
 applications:
 - name: web-app
   random-route: true
-  memory: 512M
+  memory: 64M
