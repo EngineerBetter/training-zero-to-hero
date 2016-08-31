@@ -3,3 +3,4 @@ applications:
   command: ruby periodic_logger.rb
   no-route: true
   health-check-type: none
+  memory: 64M
