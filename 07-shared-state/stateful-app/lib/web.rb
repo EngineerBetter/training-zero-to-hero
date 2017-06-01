@@ -40,7 +40,7 @@ end
 REDIS_CREDENTIALS = OpenStruct.new(REDIS_SERVICES.first.fetch("credentials"))
 
 REDIS = Redis::Namespace.new(CF_APP.space_id, redis: Redis.new(
-  host: REDIS_CREDENTIALS.hostname,
+  host: REDIS_CREDENTIALS.hostname || REDIS_CREDENTIALS.host,
   password: REDIS_CREDENTIALS.password,
   port: REDIS_CREDENTIALS.port
 ))
