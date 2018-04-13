@@ -1,4 +1,6 @@
-name: imperfect-app
-memory: 32M
-disk_quota: 256M
-random-route: true
+---
+applications:
+- name: imperfect-app
+  memory: 32M
+  disk_quota: 256M
+  random-route: true
