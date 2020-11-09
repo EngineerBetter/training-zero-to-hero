@@ -20,7 +20,7 @@ VCAP_SERVICES = JSON.parse(ENV.fetch("VCAP_SERVICES", JSON.dump({
       port: 6379,
     }
   } ],
-  redis: [ {
+  counter: [ {
     credentials: {
       hostname: "localhost",
       password: nil,
