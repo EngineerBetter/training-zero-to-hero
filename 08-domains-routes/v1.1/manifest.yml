@@ -1,4 +1,4 @@
 ---
 applications:
-- name: v1.1
+- name: v1-1
   memory: 64M
