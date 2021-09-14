@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-ruby ">= 2.2.9"
 
 gem "sinatra"
 gem "thin"
